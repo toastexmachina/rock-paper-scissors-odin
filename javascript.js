@@ -34,5 +34,36 @@ function getComputerChoice(x) {
     (x == 3) ? 'Scissors' :
     "";
 }
-let computerSelection = getComputerChoice(randomNumber);
+let computerSelection = getComputerChoice(randomNumber).toLowerCase();
 console.log(computerSelection);
+
+// FUNCTION that plays a single round of rock paper scissors
+
+// input player choice into the variable playerSelection
+let playerSelection = prompt("What is your choice?");
+// make playerSelection case-sensitive
+playerSelection.toLowerCase();
+
+// victory conditions - 1
+// rock / scissors or paper / rock or scissor / paper 
+if ((playerSelection == 'rock' && computerSelection == 'scissors') 
+|| (playerSelection == 'paper' && computerSelection == 'rock')
+|| (playerSelection == 'scissor' && computerSelection == 'paper')) {
+    return true; 
+}
+
+// loss conditions - 0
+if ((playerSelection == 'rock' && computerSelection == 'paper')
+|| (playerSelection == 'paper' && computerSelection == 'scissors')
+|| (playerSelection == 'scissors' && computerSelection == 'rock')) {
+    return false;
+}
+
+// Outcome of rock vs paper
+// outcome of rock vs scissors
+// outcome of paper vs scissors
+// outcome of tie
+// return a string that declares the winner
+
+
+
