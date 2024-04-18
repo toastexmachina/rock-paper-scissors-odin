@@ -55,6 +55,7 @@ function playGame() {
         playerSelection.toLowerCase();
         
         playRound(computerSelection, playerSelection);
+        alert("You played " + playerSelection + ". The computer played " + computerSelection + ".")
         alert("the player score is " + pScore + "." + "The computer score is " + cScore + ".")
         }
 }
