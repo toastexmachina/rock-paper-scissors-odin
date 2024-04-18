@@ -48,16 +48,14 @@ function playGame() {
     cScore = 0;
 // loop conditions p and c that tracks the number of wins.
     for (let i=0; i<6; i++) {
-
         let randomNumber = Math.floor(Math.random()*3 + 1);
-        
         let computerSelection = getComputerChoice(randomNumber).toLowerCase();
         
         let playerSelection = prompt("What is your choice?");
         playerSelection.toLowerCase();
         
         playRound(computerSelection, playerSelection);
-        alert("the player score is " + pScore + "." + " and the computer score is " + cScore + ".")
+        alert("the player score is " + pScore + "." + "The computer score is " + cScore + ".")
         }
 }
 console.log(playGame());
