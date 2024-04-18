@@ -47,7 +47,7 @@ function playGame() {
     pScore = 0;
     cScore = 0;
 // loop conditions p and c that tracks the number of wins.
-    for (let i=0; i<6; i++) {
+    for (let i=0; i<5; i++) {
         let randomNumber = Math.floor(Math.random()*3 + 1);
         let computerSelection = getComputerChoice(randomNumber).toLowerCase();
         
@@ -59,5 +59,6 @@ function playGame() {
         }
 }
 console.log(playGame());
+alert("final score: " + "You - " + pScore + ". Computer - " + cScore);
 
 
