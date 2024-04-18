@@ -51,7 +51,7 @@ function playGame() {
         let randomNumber = Math.floor(Math.random()*3 + 1);
         let computerSelection = getComputerChoice(randomNumber).toLowerCase();
         
-        let playerSelection = prompt("What is your choice?");
+        let playerSelection = prompt("Rock... Paper... Scissors... Shoot!");
         playerSelection.toLowerCase();
         
         playRound(computerSelection, playerSelection);
