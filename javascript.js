@@ -1,32 +1,5 @@
-// function to randomly return rock, paper, or scissors
-
-// declare a function called getComputerChoice
-// randomly return 1, 2, or 3
-    //return a random fraction 
-    // multiply by 3
-    // add by 1 (can't be less than 1)
-    // round the result down to the nearest integer
-// conditonal if 1, then rock
-// conditional if 2, then paper
-// conditional if 3, then scissors
-// variable to store the outcome
-// return the result
-
+// process to return a computer selection
 let randomNumber = Math.floor(Math.random()*3 + 1);
-console.log(randomNumber);
-
-/* let computerChoice;
-    
-if (randomNumber === 1) {
-    computerChoice = 'Rock';
-} else if (randomNumber === 2) {
-    computerChoice = 'Paper';
-} else if (randomNumber === 3) {
-    computerChoice = 'Scissors';
-}
-console.log(computerChoice); */
-
-//Below looks cleaner
 
 function getComputerChoice(x) {
     return (x == 1) ? 'Rock':
@@ -34,36 +7,26 @@ function getComputerChoice(x) {
     (x == 3) ? 'Scissors' :
     "";
 }
+
+// computer and player selection
 let computerSelection = getComputerChoice(randomNumber).toLowerCase();
-console.log(computerSelection);
-
-// FUNCTION that plays a single round of rock paper scissors
-
-// input player choice into the variable playerSelection
 let playerSelection = prompt("What is your choice?");
-// make playerSelection case-sensitive
 playerSelection.toLowerCase();
 
-// victory conditions - 1
-// rock / scissors or paper / rock or scissor / paper 
-if ((playerSelection == 'rock' && computerSelection == 'scissors') 
-|| (playerSelection == 'paper' && computerSelection == 'rock')
-|| (playerSelection == 'scissor' && computerSelection == 'paper')) {
-    return true; 
+
+// function that plays a single round of rock paper scissors
+function playRound(playerSelection, computerSelection) {
+    if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+        (playerSelection == 'paper' && computerSelection == 'rock') ||
+        (playerSelection == 'scissor' && computerSelection == 'paper')) {
+        return "you winnnnn";
+    } else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
+        (playerSelection == 'paper' && computerSelection == 'scissors') ||
+        (playerSelection == 'scissors' && computerSelection == 'rock')) {
+        return "you loseeeee";
+    } else {
+        return "Try again.";
+    }
 }
 
-// loss conditions - 0
-if ((playerSelection == 'rock' && computerSelection == 'paper')
-|| (playerSelection == 'paper' && computerSelection == 'scissors')
-|| (playerSelection == 'scissors' && computerSelection == 'rock')) {
-    return false;
-}
-
-// Outcome of rock vs paper
-// outcome of rock vs scissors
-// outcome of paper vs scissors
-// outcome of tie
-// return a string that declares the winner
-
-
-
+console.log(playRound(playerSelection, computerSelection));
