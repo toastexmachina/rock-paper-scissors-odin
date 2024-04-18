@@ -19,14 +19,31 @@ function playRound(playerSelection, computerSelection) {
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'paper' && computerSelection == 'rock') ||
         (playerSelection == 'scissor' && computerSelection == 'paper')) {
-        return "you winnnnn";
+        return true;
     } else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'rock')) {
-        return "you loseeeee";
+        return false;
     } else {
-        return "Try again.";
+        return null;
     }
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+// function to play a 5 round game that keeps score and reports a winner or loser at the end
+// track wins and losses
+// ignore ties
+// alert score 
+// end after five games
+//
+
+function playGame() {
+
+}
+
+// loop conditions p and c that tracks the number of wins.
+for (let i=0; i<6; i++) {
+
+}
+
