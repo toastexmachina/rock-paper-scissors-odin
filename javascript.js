@@ -1,20 +1,11 @@
-/*
-// process to return a computer selection
-let randomNumber = Math.floor(Math.random()*3 + 1);
-*/
 
+// Function that converts a random integer input of 1-3 into a computerSelection of "rock", "paper", or "scissors"
 function getComputerChoice(x) {
     return (x == 1) ? 'Rock':
     (x == 2) ? 'Paper':
     (x == 3) ? 'Scissors' :
     "";
 }
-/*
-// computer and player selection
-let computerSelection = getComputerChoice(randomNumber).toLowerCase();
-let playerSelection = prompt("What is your choice?");
-playerSelection.toLowerCase();
-*/
 
 // function that plays a single round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
@@ -32,17 +23,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// function to play a 5 round game that keeps score and reports a winner or loser at the end
-    // create variables that update the score for each player
-       // pScore = pScore + 1;
-       // cScore = sScore + 1;
-// track wins and losses
-// ignore ties
-// alert score 
-     //   alert(pScore, cScore);
-// end after five games
-//
-
+// function to play a game of 5 rounds and track wins and losses 
 function playGame() {
     pScore = 0;
     cScore = 0;
@@ -60,6 +41,6 @@ function playGame() {
         }
 }
 console.log(playGame());
-alert("final score: " + "You - " + pScore + ". Computer - " + cScore);
+alert("Final score: " + "You - " + pScore + ". Computer - " + cScore);
 
 
