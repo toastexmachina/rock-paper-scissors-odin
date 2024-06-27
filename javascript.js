@@ -23,19 +23,44 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// button event listener
-let btnRock = document.querySelector("rock");
-let btnPaper = document.querySelector("paper");
-let btnScissor = document.querySelector('scissor');
+let results = document.querySelector("#results");
 
-btnRock.addEventListener("click", playRound("rock", computerSelection));
-btnPaper.addEventListener("click", playRound("paper", computerSelection));
-btnScissor.addEventListener("click", playRound("scissor", computerSelection));
+let pScore = 0;
+let cScore = 0;
+
+// score tracker
+let playerScore = document.querySelector('#playerScore');
+let computerScore = document.querySelector('#computerScore');
+
+playerScore.textContent = `Player: ${pScore}`
+computerScore.textContent = `Computer: ${cScore}`
+
+function playGame(playerSelection) {
+    let randomNumber = Math.floor(Math.random()*3 + 1);
+    let computerSelection = getComputerChoice(randomNumber).toLowerCase();
+    
+    playRound(playerSelection, computerSelection);
+
+    results.textContent = `You played ${playerSelection}. The Computer played ${computerSelection}`
+}
+
+// button event listener
+let btnRock = document.querySelector(".rock");
+let btnPaper = document.querySelector(".paper");
+let btnScissor = document.querySelector('.scissor');
+
+btnRock.addEventListener("click", function(){
+    playGame("rock");
+});
+btnPaper.addEventListener("click", function(){
+    playGame("paper")
+});
+btnScissor.addEventListener("click", function(){
+    playGame("scissor")
+});
 
 // function to play a game of 5 rounds and track wins and losses 
-function playGame() {
-    pScore = 0;
-    cScore = 0;
+/*
 // loop conditions p and c that tracks the number of wins.
     for (let i=0; i<5; i++) {
         let randomNumber = Math.floor(Math.random()*3 + 1);
@@ -48,8 +73,7 @@ function playGame() {
         alert("You played " + playerSelection + ". The computer played " + computerSelection + ".")
         alert("the player score is " + pScore + "." + "The computer score is " + cScore + ".")
         }
-}
-console.log(playGame());
-alert("Final score: " + "You - " + pScore + ". Computer - " + cScore);
+        */
+
 
 
