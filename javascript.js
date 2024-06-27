@@ -28,6 +28,9 @@ let cScore = 0;
 let playerScore = document.querySelector('#playerScore');
 let computerScore = document.querySelector('#computerScore');
 
+playerScore.textContent = `Player: ${pScore}`
+computerScore.textContent = `Computer: ${cScore}`
+
 function playGame(playerSelection) {
     let randomNumber = Math.floor(Math.random()*3 + 1);
     let computerSelection = getComputerChoice(randomNumber).toLowerCase();
