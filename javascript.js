@@ -24,8 +24,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // button event listener
+let btnRock = document.querySelector("rock");
+let btnPaper = document.querySelector("paper");
+let btnScissor = document.querySelector('scissor');
 
-
+btnRock.addEventListener("click", playRound("rock", computerSelection));
+btnPaper.addEventListener("click", playRound("paper", computerSelection));
+btnScissor.addEventListener("click", playRound("scissor", computerSelection));
 
 // function to play a game of 5 rounds and track wins and losses 
 function playGame() {
