@@ -23,6 +23,10 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// button event listener
+
+
+
 // function to play a game of 5 rounds and track wins and losses 
 function playGame() {
     pScore = 0;
